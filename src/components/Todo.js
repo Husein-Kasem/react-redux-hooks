@@ -21,7 +21,7 @@ export default function Todo({ todo }) {
 
   return (
     <div className="col s12 m6 l4">
-      <div className="card">
+      <div className="card hoverable">
         <div className="card-image waves-effect waves-block waves-light">
           <img
             className="activator responsive-img card-image"

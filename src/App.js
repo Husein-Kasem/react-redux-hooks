@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 import TodoInput from "./components/TodoInput";
 import TodoList from "./components/TodoList";
@@ -12,8 +13,10 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <TodoInput />
-        <TodoList todos={todos} />
+        <ErrorBoundary>
+          <TodoInput />
+          <TodoList todos={todos} />
+        </ErrorBoundary>
       </div>
     </div>
   );
